@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+
+<body>
+    <center>
+        <h1> HTML Forms</h1>
+        <form action="">
+            <!-- Type  Text -- name -->
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" placeholder="Enter Your name">
+            <br>
+            <br>
+            <!-- Type  email -- email -->
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Enter Email address">
+            <br>
+            <br>
+            <!-- Type  password -- password -->
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" placeholder="Enter password address" minlength="8"
+                maxlength="15">
+            <br>
+            <br>
+            <!-- Type  age -- age -->
+            <label for="age">Age: </label>
+            <input type="number" name="age" min="18" max="45" id="age">
+            <br>
+            <br>
+            <!-- Type  dob -- dob -->
+            <label for="dob">Dob: </label>
+            <input type="date" name="dob" id="dob" min="2020-01-01">
+            <br>
+            <br>
+            <!-- Type  gender -- gender -->
+            <label for="gender">Gender: </label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+            <br>
+            <br>
+
+            <!-- Type  number -- mobile -->
+            <label for="mobile">Telephone: </label>
+            <input type="number" name="mobile" id="mobile" placeholder="Enter Telephone number">
+            <br>
+            <br>
+
+            <label for="language">Select Your language</label>
+            <select name="language" id="language">
+                <option value="">Choose your language</option>
+                <option value="hindi">Hindi</option>
+                <option value="english">English </option>
+                <option value="bengali">Bengali</option>
+                <option value="kannada">Kannada</option>
+            </select>
+            <br>
+            <br>
+            <!-- Type Checkbox - hobby  -->
+
+            <label for="hobby">Hobby</label>
+            <input type="checkbox" name="hobby" id="html" value="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" name="hobby" id="html" value="html">
+            <label for="css">Css</label>
+            <input type="checkbox" name="hobby" id="css" value="css">
+            <label for="js">JS</label>
+            <input type="checkbox" name="hobby" id="js" value="js">
+            <br><br>
+            <label for="image">Image Upload</label>
+            <input type="file" name="image">
+            <br><br>
+            <!-- Address -->
+            <label for="address">Address</label>
+            <textarea name="address" id="address" rows="5" cols="10"></textarea>
+            <br><br>
+            <input type="submit">
+            <input type="reset" name="" id="">
+        </form>
+    </center>
+
+
+</body>
+
+</html>

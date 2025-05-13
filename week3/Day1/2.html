@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators</title>
+    <!-- 
+    4 Types
+    1. decendent combinators  ( ) space
+    2. child combinators    ( > ) 
+    3.general sibling combinators  ( ~ )
+    4. adjacent sibling combinators ( + )
+    -->
+
+    <style>
+        #h1>.con+p {}
+
+        h1>h1+p~#div {}
+
+        body>table>thead+ {}
+
+        .con h1 {
+            color: teal;
+        }
+
+        .con>h3 {
+            color: blue;
+        }
+
+        #h3~p {
+            color: green;
+        }
+
+        #h3+p {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <h1>Hello Guyzz</h1>
+        <p>Hello Guyzz</p>
+        <h3>Hello Guyzz</h3>
+        <h1>Hello Guyzz</h1>
+        <h3>Hello Guyzz</h3>
+        <p>Hello Guyzz</p>
+
+        <div>
+            <h1>Hello</h1>
+            <h3 id="h3">Hello</h3>
+            <p>one</p>
+            <p>two</p>
+            <p>three</p>
+            <p>four</p>
+            <p></p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
