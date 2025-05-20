@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .title {
+            font-size: 55px;
+            margin: 30px 0;
+            color: rgb(14, 92, 66);
+        }
+
+        .app {
+            width: 80%;
+            margin: auto;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .app__row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            /* border: 2px solid red; */
+            /* justify-ntent: center; */
+
+
+        }
+
+        .app__row-movie {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 7px;
+            transition: all 200ms;
+        }
+
+        .app__row-movie:hover {
+            overflow: hidden;
+            transform: scale(1.01);
+            cursor: pointer;
+        }
+
+        .app__row-movie img {
+            width: 100%;
+        }
+
+        .movie__details {
+            text-align: center;
+        }
+
+        .movie-name {
+
+            margin: 10px 0;
+        }
+
+        .btn {
+
+            margin: 10px 0;
+            border: 0;
+            padding: 10px 15px;
+
+            background-color: rgb(90, 182, 182);
+            font-size: 17px;
+            border-radius: 10px;
+            font-weight: bold;
+            color: rgb(9, 9, 44);
+            transition: all 200ms;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-20px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <h1 class="title">Movie App</h1>
+        <div class="app__row">
+            <div class="app__row-movie">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.37O_Gc11z0hNbNDRnSbQdgHaFj&pid=Api&P=0&h=180" alt="">
+                <div class="movie__details">
+
+                    <h2 class="movie-name">Gabbar</h2>
+                    <button class="btn">Book Now</button>
+                </div>
+
+            </div>
+            <div class="app__row-movie">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.37O_Gc11z0hNbNDRnSbQdgHaFj&pid=Api&P=0&h=180" alt="">
+                <div class="movie__details">
+
+                    <h2 class="movie-name">Gabbar</h2>
+                    <button class="btn">Book Now</button>
+                </div>
+
+            </div>
+            <div class="app__row-movie">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.37O_Gc11z0hNbNDRnSbQdgHaFj&pid=Api&P=0&h=180" alt="">
+                <div class="movie__details">
+
+                    <h2 class="movie-name">Gabbar</h2>
+                    <button class="btn">Book Now</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="app__row">
+            <div class="app__row-movie">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.37O_Gc11z0hNbNDRnSbQdgHaFj&pid=Api&P=0&h=180" alt="">
+                <div class="movie__details">
+
+                    <h2 class="movie-name">Gabbar</h2>
+                    <button class="btn">Book Now</button>
+                </div>
+
+            </div>
+            <div class="app__row-movie">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.37O_Gc11z0hNbNDRnSbQdgHaFj&pid=Api&P=0&h=180" alt="">
+                <div class="movie__details">
+
+                    <h2 class="movie-name">Gabbar</h2>
+                    <button class="btn">Book Now</button>
+                </div>
+
+            </div>
+            <div class="app__row-movie">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.37O_Gc11z0hNbNDRnSbQdgHaFj&pid=Api&P=0&h=180" alt="">
+                <div class="movie__details">
+
+                    <h2 class="movie-name">Gabbar</h2>
+                    <button class="btn">Book Now</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

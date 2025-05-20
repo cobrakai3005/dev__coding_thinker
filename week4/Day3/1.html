@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLEX</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+            color: brown;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            min-height: 100vh;
+        }
+
+        .parent,
+        .child {
+            padding: 20px;
+            width: 50%;
+
+        }
+
+        .container,
+        .container2 {
+            border: 2px solid rgb(162, 18, 64);
+            display: flex;
+            height: 50%;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .container div,
+        .container2 div {
+            width: 70px;
+            height: 100px;
+
+        }
+
+        .container div:nth-child(1),
+        .container2 div:nth-child(1) {
+            background-color: teal;
+        }
+
+        .container div:nth-child(2),
+        .container2 div:nth-child(2) {
+            background-color: rgb(154, 107, 204);
+        }
+
+        .container div:nth-child(3),
+        .container2 div:nth-child(3) {
+            background-color: rgb(128, 75, 0);
+        }
+
+        .container div:nth-child(4),
+        .container2 div:nth-child(4) {
+            background-color: rgb(176, 15, 31);
+        }
+
+        .container div:nth-child(5),
+        .container2 div:nth-child(5) {
+            background-color: rgb(128, 0, 128);
+        }
+
+        .container div:nth-child(6),
+        .container2 div:nth-child(6) {
+            background-color: rgb(36, 128, 0);
+        }
+
+        .container div:nth-child(7),
+        .container2 div:nth-child(7) {
+            background-color: rgb(7, 36, 118);
+        }
+
+        .container2 div:nth-child(7) {
+            flex-grow: 2;
+        }
+
+        .container2 div:nth-child(1) {}
+
+        .container2 div:nth-child(2) {
+            order: 1;
+        }
+
+        .container2 div:nth-child(3) {
+            flex-grow: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Flex Properties</h1>
+
+    <main>
+
+        <div class="parent">
+            <h2>Parent Properties</h2>
+            <li>Display</li>
+            <p>display: flex</p>
+            <li>Flex Direction</li>
+
+            <p>row, coloumn, row-reverse, coloumn-revers</p>
+            <li>Justify Content</li>
+            <p>For Horizontal Alignment</p>
+            <p>start, space-evenly, space-between center, end etc, </p>
+            <div class="container">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+
+                <li>Align Item </li>
+                <p>For Vertical Alignment</p>
+                <p>start, space-evenly, space-between center, end etc, </p>
+                <li>Align Content </li>
+                <p>start, space-evenly, space-between center, end etc, </p>
+                <p>For Vertical Alignment</p>
+                <li>Flex Wrap</li>
+                <p>It Wraps the content within the row</p>
+                <p>wrap, no-wrap</p>
+                <li>Display</li>
+                <li>Display</li>
+            </ul>
+
+        </div>
+        <div class="child">
+            <h2>Child Properties</h2>
+
+            <ul>
+                <li>order order: 2</li>
+                <li>flex-grow flex-grow: 2</li>
+                <li>flex-shrink ; flex-shrink: 2</li>
+                <li>flex-basis flex-basis:100%</li>
+            </ul>
+
+            <div class="container2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+</body>
+
+</html>

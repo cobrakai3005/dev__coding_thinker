@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        .parent {
+            width: 200px;
+            height: 200px;
+            border: 10px solid green;
+            background-color: bisque;
+            padding: 20px;
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            border: 10px solid black;
+
+            background-color: rgb(0, 145, 255);
+            padding: 10px;
+            margin: 10px;
+
+
+            padding: 10px 20px 30px;
+            /*Top left-Right  bottom*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Box Model</h1>
+    <div class="parent">
+
+        <div class="child"> Hello world</div>
+    </div>
+    <p>CSS Box model helps us for alignment of html element (box )</p>
+    There are four properties of:
+    <ul>
+        <li>Content: Data of or value of html element</li>
+        <li>Border: Boundary of our jtml element</li>
+        <li>Paadding: distance or gap between content and its border</li>
+        <li>Margin: gap between border and outer element;</li>
+        <li>
+            <h2>Padding Properties</h2>
+            Padding top
+            Padding bottom
+            Padding left
+            Padding right
+        </li>
+        <li>
+            padding: 10px (All direction)
+        </li>
+        <li>
+            padding: 10px 20px (Top-Bottom ,Left-Right )
+        </li>
+        <li>
+            padding: 10px 20px 30px (Top ,Left-Right , Bottom)
+        </li>
+        <li>
+            padding: 10px 20px 30px 40px (Top ,Right, Bottom , Left)
+        </li>
+    </ul>
+</body>
+
+</html>
