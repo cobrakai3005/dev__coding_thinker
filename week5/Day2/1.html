@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Web Design Media Query</title>
+    <style>
+        div {
+            width: 100%;
+            height: 100vh;
+            background-color: red;
+        }
+
+        @media screen and (max-width: 1200px) and (min-width: 900px) {
+            div {
+                background-color: aquamarine;
+            }
+        }
+
+        @media screen and (max-width: 890px) and (min-width: 400px) {
+            div {
+                background-color: rgb(140, 127, 255);
+            }
+        }
+
+        @media screen and (max-width: 300px) and (min-width: 50px) {
+            div {
+                background-color: rgb(127, 255, 210);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+</body>
+
+</html>

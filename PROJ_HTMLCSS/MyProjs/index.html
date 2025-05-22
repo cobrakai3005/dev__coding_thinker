@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Card</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        button,
+        img {
+            cursor: pointer;
+        }
+
+        .container {
+            background-color: rgb(194, 4, 4);
+            width: 600px;
+            height: 600px;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        h1 {
+            margin-top: 40px;
+        }
+
+        .glassy {
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(3px);
+            width: 80%;
+            height: 80%;
+            z-index: 100;
+
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            letter-spacing: 0.7px;
+
+        }
+
+        .image {
+            width: 400px;
+
+            transition: all 400ms ease-in-out;
+        }
+
+        .add-to-cart {
+            background-color: rgb(194, 4, 4);
+            border: 0;
+            padding: 10px 30px;
+            color: white;
+            font-size: 16px;
+            width: 400px;
+            border-radius: 18px;
+            transition: all 300ms linear;
+        }
+
+        .add-to-cart:hover {
+            scale: 1.04;
+            background-color: rgba(255, 255, 255, 0.71);
+            color: #111;
+        }
+
+        .image:hover {
+            transform: rotate(60deg);
+        }
+
+        .btns {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            margin-bottom: 70px;
+        }
+
+
+        .sizes {
+            font-size: 17px;
+            font-weight: bold;
+            margin: 0 20px;
+
+        }
+
+        .size {
+            padding: 5px 8px;
+            border: 0;
+            margin: 15px 0;
+            background-color: red;
+            color: white;
+            font-size: 17px;
+            border-radius: 5px;
+        }
+
+        .size:hover,
+        .size:focus {
+            background-color: rgba(255, 0, 0, 0.45);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="glassy">
+            <h1>Nike Air Max</h1>
+            <img class="image" src="./shoe.png" alt="">
+            <div class=""></div>
+
+            <div class="btns">
+                <div>
+                    <span class="sizes">Sizes</span>
+                    <button class="size">7</button>
+                    <button class="size">8</button>
+                    <button class="size">9</button>
+                    <button class="size">10</button>
+                </div>
+                <button class="add-to-cart">Add to Card</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
