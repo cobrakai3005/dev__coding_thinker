@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo class</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            border: 0;
+            font-size: 20px;
+        }
+
+        button:hover {
+            border: none;
+            color: white;
+
+            background-color: red;
+        }
+
+        button:active {
+            border: none;
+            color: white;
+
+            background-color: blueviolet;
+        }
+
+        input:focus {
+            border: none;
+            color: white;
+            background-color: blueviolet;
+        }
+
+        ul>li {
+            padding: 20px;
+        }
+
+        ul>li:nth-child(1) {
+            background-color: aqua;
+        }
+
+        ul>li:nth-child(2n-1) {
+            background-color: rgb(239, 153, 239);
+        }
+
+        ul>li:nth-child(2n) {
+            background-color: rgb(114, 85, 181);
+        }
+
+        input:checked+label {
+            padding: 20px;
+            background-color: teal;
+        }
+
+        input:checked {
+            accent-color: rgb(66, 177, 66);
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>Hover me</button>
+    <br><br>
+    <input type="text" placeholder="Type Something">
+
+    <ul>
+        <li>Hello</li>
+        <li>World</li>
+        <li>Java</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>DSA</li>
+
+    </ul>
+
+    <br><br><br>
+    <h2>Checkbox</h2>
+    <input id="checkbox" type="checkbox" checked>
+    <label for="checkbox">Checkbox</label>
+</body>
+
+</html>

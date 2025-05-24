@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+    <style>
+        h3 {
+            font-size: 34px;
+        }
+
+        /* h3::before {
+            content: "💖";
+        } */
+
+        h3::after {
+            content: "🔫";
+        }
+
+        h3::first-letter {
+            color: red;
+        }
+
+        h6::first-line {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h3>This Quote is Funny</h3>
+        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid culpa deserunt dolores quas quae veniam ut
+            in unde eaque veritatis quisquam, non eligendi ratione maxime officia! Dolorem aut minima dolores dolore
+            porro possimus quo voluptatem molestias eum eaque, reprehenderit cupiditate explicabo nulla beatae? Illo!
+        </h6>
+    </div>
+</body>
+
+</html>
