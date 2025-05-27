@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradient</title>
+    <style>
+        /* 
+        Linear (to position), radial (circle at position), conical (60deg, 50%)
+
+        */
+        .linear-gradient {
+            width: 100%;
+            height: 40vh;
+            background-image: linear-gradient(to right, rgb(185, 62, 225), rgb(47, 4, 62));
+        }
+
+        .radial-gradient {
+            margin-top: 30px;
+            width: 100%;
+            height: 40vh;
+            /* default circle at center */
+            background-image: radial-gradient(circle at center, rgb(196, 186, 199), teal, rgb(121, 33, 153));
+            background-image: radial-gradient(ellipse at top, rgb(196, 186, 199), teal, rgb(121, 33, 153));
+            background-image: radial-gradient(circle at center, rgb(196, 186, 199), teal, rgb(121, 33, 153));
+
+            /* background-image: radial-gradient(circle at top, rgb(196, 186, 199), teal, rgb(121, 33, 153)); */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="linear-gradient"></div>
+    <div class="radial-gradient"></div>
+</body>
+
+</html>

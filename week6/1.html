@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(-300px);
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        body {
+            height: 100vh;
+            display: grid;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background-image: linear-gradient(rgb(170, 112, 121), blueviolet);
+            place-items: center;
+            overflow-y: hidden;
+        }
+
+        .animate {
+            color: blueviolet;
+            font-size: 20vw;
+            /* background-color: teal; */
+            color: white;
+            font-weight: bold;
+            animation: fade-in 2s linear alternate infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Css Animation</h1>
+
+
+    <div class="animate">Hello</div>
+
+</body>
+
+</html>
