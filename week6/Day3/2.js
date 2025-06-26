@@ -27,6 +27,6 @@ console.log(z, typeof z);
 
 var a = null; //null is explicit data-type
 console.log(a, typeof a);
-
+var himanshu = null;
 var b; //implicit data type undefind;
 console.log(b, typeof b);

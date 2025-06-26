@@ -22,7 +22,7 @@
 
 var x; //declaretion
 
-x = 5; // assignment
+x = 5; // assignment | Initialisation
 
 var x = 15; //Re-declaration
 console.log("x", x);
