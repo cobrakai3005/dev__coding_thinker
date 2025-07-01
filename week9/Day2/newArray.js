@@ -10,3 +10,5 @@ let nums = [1, 4, 6, 8, 10];
 let numss = nums.reverse();
 
 console.log(nums, numss);
+
+let a = [1, 1, 2, 3, 4, 4, 5];
