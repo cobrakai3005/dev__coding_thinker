@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listner</title>
+</head>
+
+<body>
+    <button>Click Me</button>
+
+
+
+    <script>
+
+        // document.querySelector("button").addEventListener('click', getVal);
+
+        document.querySelector("button").onclick = getVal;
+
+        function getVal(o) {
+            console.log(o);
+        }
+
+
+        //Wheneve r we are attaching an event using addEvent Listner an event object is formed if you want use this evenet object you can simpy pass any value in event handler parameter
+    </script>
+</body>
+
+</html>

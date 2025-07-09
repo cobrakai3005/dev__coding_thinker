@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-3</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <!-- Dont make any changes here -->
+    <h1>Favourite Page</h1>
+
+    <a href="./index.html">home</a>
+    <div>
+
+
+        <table>
+            <!-- Dont change order of columns -->
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Priority</th>
+                    <th>Favourite</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Append your output to tbody -->
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+        let fav = JSON.parse(localStorage.getItem("fav")) || [];
+
+        displayTable(fav);
+        // window.addEventListener("load", (event) => {
+        // });
+
+        function displayTable(todoAr) {
+            document.querySelector("tbody").innerText = "";
+            todoAr.forEach((el, i) => {
+                const row = document.createElement("tr");
+
+                const td1 = document.createElement("td");
+                td1.innerText = el.name;
+
+                const td2 = document.createElement("td");
+                td2.innerText = el.priority;
+
+                if (el.priority == "High") {
+                    td2.style.backgroundColor = "red";
+                    td2.style.opacity = "0.7";
+                } else {
+                    td2.style.backgroundColor = "green";
+                    td2.style.opacity = "0.7";
+                }
+
+                const td3 = document.createElement("button");
+                td3.innerText = "Delete";
+                td3.addEventListener("click", (e) => {
+                    fav.splice(i, 1)
+                    localStorage.setItem("fav", JSON.stringify(fav));
+                    displayTable(fav)
+                });
+
+                row.append(td1, td2, td3);
+                document.querySelector("tbody").append(row);
+
+            });
+        }
+    </script>
+</body>
+
+</html>

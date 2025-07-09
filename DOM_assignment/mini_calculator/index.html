@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Calculator</title>
+</head>
+
+<body>
+    <input type="number" placeholder="Enter number 1" id="num-1">
+    <input type="number" placeholder="Enter number 2" id="num-2">
+
+    <p id="result">Result: </p>
+    <br><br>
+    <button id="add">Add</button>
+    <button id="sub">Subtract</button>
+    <button id="multiply">Multiply</button>
+    <button id="divide">Divide</button>
+
+
+    <script>
+        const input1 = document.getElementById("num-1")
+        const input2 = document.getElementById("num-2")
+        let result;
+
+
+        const btns = document.querySelectorAll('button')
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+
+                switch (btn.id) {
+                    case "add":
+                        result = parseInt(input1.value) + parseInt(input2.value);
+
+                        break;
+                    case "sub":
+                        result = parseInt(input1.value) - parseInt(input2.value);
+                        break;
+                    case "multiply":
+                        result = parseInt(input1.value) * parseInt(input2.value);
+                        break;
+                    case "divide":
+                        result = parseInt(input1.value) / parseInt(input2.value);
+                        break;
+
+                    default:
+                        break;
+                }
+
+                document.querySelector("p").innerText = `Result ${result}`
+            })
+        })
+
+        console.log(result);
+    </script>
+</body>
+
+</html>

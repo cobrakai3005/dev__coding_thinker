@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Stoarge Lecture</title>
+</head>
+
+<body>
+    <h1>Local Storage</h1>
+    <p>localStorage is client side database</p>
+    <p>All you need to know local storage</p>
+
+    <div class="iresult"></div>
+
+    <script>
+        //1 . setItems
+
+        localStorage.setItem("name", "love")
+        localStorage.setItem("age", 25)
+        localStorage.setItem("status", true)
+        localStorage.setItem("hobby", JSON.stringify(["a", "b", "c"]))
+        localStorage.setItem("address", JSON.stringify({ "a": 1 }))
+
+
+
+        //GEt Items
+
+        const name = localStorage.getItem('name')
+        const age = localStorage.getItem('age')
+        const status = localStorage.getItem('status')
+
+        const hobbies = JSON.parse(localStorage.getItem("hobby"))
+        const address = JSON.parse(localStorage.getItem("address"))
+        console.log(address);
+        document.querySelector('.iresult').innerHTML += `name: ${name} age: ${age} status: ${status} hobbies: ${hobbies} , address: ${address} `
+
+
+
+        /// Remove item
+
+        localStorage.removeItem('name')
+        localStorage.clear()
+
+
+
+
+    </script>
+</body>
+
+</html>

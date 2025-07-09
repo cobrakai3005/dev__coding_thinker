@@ -43,8 +43,9 @@ console.log(
   true + 1 + "0" || (false && 0 < 0 && !"null" && "hello" == "Hello") || true
 ); //"20"
 console.log("ram" || ("shyam" && !undefined) || (!!!true && "false")); //t
-console.log((!!!0 && " " && isNaN(NaN) && 5 >= 5.5) || 101); //f
+console.log((!!!0 && " " && isNaN(NaN) && 5 >= 5.5) || 101); //101
 
-let x = (true && falsle) || true;
+let x = (true && false) || true;
 let y = (true || false) && true;
 console.log(x == y); //f
+true && true

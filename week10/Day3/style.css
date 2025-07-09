@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(199, 213, 236);
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.main__heading {
+  text-align: center;
+  font-size: 41px;
+  color: rgba(0, 0, 0, 0.871);
+}
+.main__para {
+  font-size: 16px;
+  text-align: center;
+}
+.first {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.left {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.left h1 {
+  font-size: 23px;
+}
+.left p {
+  font-size: 15px;
+  line-height: 24px;
+}
+.left button {
+  padding: 7px 14px;
+  border: 0;
+  background-color: orangered;
+  color: white;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.right {
+}
+.right img {
+  width: 80%;
+  height: 90%;
+}
+
+/* Sec */
+
+.sec {
+  width: 100%;
+}
+.sec-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.sec-grid div {
+}
+.sec-grid div > h1 {
+  font-size: 21px;
+}
+
+.third {
+  margin-top: 20px;
+}
+.third-grid {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.third-grid div {
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1110px) {
+  .sec-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 750px) {
+  .first {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+  .third-grid,
+  .sec-grid {
+    padding: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

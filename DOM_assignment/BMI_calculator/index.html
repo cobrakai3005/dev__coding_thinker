@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+
+<body>
+    <h1>Check Your BMI</h1>
+
+    <p>Enter you weight and height below to check your BMI Result</p>
+
+    <p>Put your weight in (KG)</p>
+    <input type="number" placeholder="Enter your Weight" id="weight">
+    <p>Put your in Height (CM)</p>
+    <input type="number" placeholder="Enter your Height" id="height">
+    <br><br>
+    <button>Calculate BMI</button>
+
+    <p id="result"></p>
+
+
+    <script>
+        const weight = document.querySelector("#weight")
+        const height = document.querySelector("#height")
+        const btn = document.querySelector('button');
+        let bmi;
+        btn.addEventListener('click', () => {
+            bmi = parseInt(weight.value) / (parseInt(height.value) * parseInt(height.value));
+
+
+            document.querySelector('#result').innerHTML = `You BMI is ${bmi}`
+        })
+    </script>
+</body>
+
+</html>
