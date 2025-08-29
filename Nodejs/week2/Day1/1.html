@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CORS - cross origin resource sharing</h1>
+
+
+    <h2 id="head">Data.....</h2>
+</body>
+
+</html>
+
+
+<script>
+    const main = async () => {
+        const el = document.getElementById("head");
+        try {
+
+            const res = await fetch("http://localhost:8080/student/read")
+            const data = await res.text()
+
+            el.innerText = data
+        } catch (error) {
+
+            console.log(error.message);
+            el.innerText = "ERROR due to cors policy"
+
+        }
+    }
+
+    main()
+</script>

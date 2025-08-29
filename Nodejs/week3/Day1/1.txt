@@ -1,0 +1,205 @@
+1 use lovechintu
+
+2.show collections
+
+3 db.createCollections("like")
+
+4 db.insertMany([{name: "love"}, {name: "chintu"}])
+
+5 db.like.find()
+
+
+
+*********Project *******
+
+1 mongosh;
+2 use  ctdb
+
+
+3 db.createCollections("students");
+4 db.createCollections("trainer");
+5 show collections;
+
+//Cerate
+6 db.insertMany([
+
+    {
+        "name": "Amit Sir",
+        "subject: "DSA"
+    },
+    {
+        "name" : "Mayank Sir",
+        "subject": "Data Science"
+    },
+    {
+        "name" : "Love Sir",
+        "subject": "MERN"
+    },
+]);
+
+db.trainer.insertOne({
+    "name":"Damodar Sir",
+    "subject: "SQL"
+});
+
+
+//Upadted
+
+
+
+db.trainer.updateMany({},{$set: {"active": true}})
+db.trainer.updateMany({"name": "Love"},{$set: {"wfh": false}})
+db.trainer.insertOne({"name": "Love", "subject": "MERN"})
+
+
+
+
+
+//Stuident
+
+
+db.students.insertMany([
+    {
+        "name": "himanshu",
+        "age":10,
+        "wfh": true,
+        "active": false,
+        "org":"meta"
+    },
+    {
+        "name": "jayant",
+        "age":15,
+        "wfh": true,
+        "active": false,
+        "org":"meta"
+    },
+    {
+        "name": "himanshu",
+        "age":10,
+        "wfh": true,
+        "active": false,
+        "org":"google"
+    },
+     {
+        "name": "jayant",
+        "age":15,
+        "wfh": fale,
+        "active": false,
+        "org":"airbnb"
+    },
+     {
+        "name": "Ayushi",
+        "age":12,
+        "wfh": true,
+        "active": false,
+        "org":"netflix"
+    },
+     {
+        "name": "Alisha",
+        "age":10,
+        "wfh": true,
+        "active": true,
+        "org":"meta"
+    },
+])
+
+
+
+
+
+
+db.students.find();
+
+
+db.students.find({wfh: true})
+
+
+
+db.students.find({age: {$gte: 12}})
+db.students.find({age: {$lte: 12}})
+
+
+db.students.find({name: "himanshu", active: false})
+
+
+
+db.students.find($and: [{name: "himanhsu}, {aciive: true}])
+
+
+db.students.find($or: [{name: "himanhsu}, {aciive: true}])
+
+
+db.students.updateOne({org: "meta"}, {$set: {name: "akash"}})
+
+
+db.students.updateMany({org: "meta"}, {$set: {promotion: "granted"}})
+
+
+
+db.studnets.deleteOne({promotion: "granted"})
+
+
+
+All users whose gender is male
+all users whose ID is even
+Users who currently live in Japan
+Users who are female and live in India
+Users who are more than 25 years old
+Users who are less than 50 years old and live in the United States
+Total number of users who want to relocate to France (count only)
+Total number of users who are from the USA and want to relocate to Russia, sort them by age in ascending order
+Get all users, sort them by total number of family members in ASC order and age in DESC order
+
+
+All users whose gender is male
+
+1.
+db.users.find({$eq: [{gender: "male"}]});
+
+
+2.
+Users who currently live in Japan
+db.users.find({$eq: [{relocate_to: "japan"}]});
+
+
+
+3.
+
+
+Users who are female and live in India
+db.users.find({$and: [{gender: "female"}, {native: "india"}]});
+
+
+4
+Users who are more than 25 years old
+db.users.find({$gt:{age: 25}});
+
+
+5
+Users who are less than 50 years old and live in the United States
+
+db.users.find({$and: [{$lt: {age: 50}}, {native: "US}]})
+
+6.
+
+Total number of users who want to relocate to France (count only)
+
+db.users.find({relocate_to: "france"}).count()
+
+
+7
+
+Total number of users who are from the USA and want to relocate to Russia, sort them by age in ascending order
+
+db.users.find({$and: [{native: "USA"}, {relocate_to: "Russia"}]}).sort({age: 1})
+
+
+
+all users whose ID is even
+
+db.users.find({_id: $mod: [2, 0]})
+
+
+
+
+

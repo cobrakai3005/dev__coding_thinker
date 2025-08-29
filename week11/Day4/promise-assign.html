@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Assignment</title>
+</head>
+
+<body>
+    <input type="number" id="otp">
+    <button>Send OTP</button>
+    <script>
+        // let count = 0;
+        // const pr = new Promise((res, rej) => {
+        //     if (count > 0) {
+        //         res('Resolved')
+        //     } else {
+        //         rej("Reject")
+        //     }
+        // })
+
+        // pr.then((data) => {
+        //     console.log(data);
+        // }).catch(er => {
+        //     console.log(er);
+        // })
+
+
+        // function wailPromise(time) {
+        //     return new Promise((res, rej) => {
+        //         setTimeout(() => {
+        //             res("Hello Resolve")
+        //         }, time)
+        //     })
+        // }
+
+        // wailPromise(3000).then((dta) => {
+        //     console.log(dta);
+        // })
+
+        document.querySelector("button").addEventListener('click', () => {
+
+        })
+        function enterOTP(otp) {
+            return new Promise((res, rej) => {
+                if (otp === 1234) {
+                    res("Resolve")
+                } else {
+                    rej("Rejected")
+                }
+            })
+        }
+
+        document.querySelector('')
+        enterOTP(1234).then((dat) => {
+            console.log(dat);
+        }).catch(er => {
+            console.log(er);
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body style="height:2000px; padding: 100px;">
+    <div id="box" style="width:200px; height:200px; background:lightblue;">
+      Hover me and scroll the page
+    </div>
+
+    <script>
+      const box = document.getElementById('box');
+
+      box.addEventListener('mousemove', (event) => {
+        console.clear();
+        console.log("clientX:", event.clientX); // X relative to visible screen
+        console.log("clientY:", event.clientY); // Y relative to visible screen
+        console.log("pageX:", event.pageX);     // X relative to document
+        console.log("pageY:", event.pageY);     // Y relative to document
+      });
+    </script>
+  </body>
+</html>

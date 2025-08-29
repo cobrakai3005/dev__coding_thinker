@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.flex {
+  display: flex;
+}
+
+.text-2xl {
+  font-size: 55px;
+}

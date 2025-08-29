@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+    <h1>All you need to know about Promise</h1>
+
+    <script>
+
+        //Create Promise
+        const promise = new Promise((res, rej) => {
+            if (true) {
+                res('Promise Filled')
+            } else {
+                rej('Promise Reject')
+            }
+        })
+
+        console.log(promise, typeof promise);
+
+        //2.Consume Promise
+
+        //Fullfiled state -- > resolve --> .then(keyword)
+        //rejecc state --> reject--> .catch(keyword)
+
+
+        promise.then((data) => {
+            console.log(data);
+        })
+            .catch(er => {
+                console.log(er);
+            })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: auto;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .cart-products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .product {
+
+            padding: 20px 40px;
+            width: 270px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .price {
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .product img {
+            height: 250px;
+            width: 250px;
+            object-fit: contain;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="cart">Cart Products</h1>
+        <a href="cart.html">Cart Page</a>
+        <input type="text" id="search" placeholder="Search here on the basis of title">
+        <select name="" id="sort">
+            <option value="">Choose</option>
+            <option value="asc">Asc</option>
+            <option value="dsc">Dsc</option>
+        </select>
+        <div class="cart-products"></div>
+    </div>
+
+
+    <script>
+
+        let cart = JSON.parse(localStorage.getItem('cart-arr')) || []
+        const prodDivs = document.querySelector('.cart-products');
+        let total = cart.reduce((acc, el) => {
+            return acc + el.price
+        }, 0)
+        document.querySelector(".cart").innerText = `Products ${total}`
+        display(cart);
+        //https://fakestoreapi.com/products
+
+
+
+        document.querySelector('#search').addEventListener('input', () => {
+            const query = document.querySelector('#search').value;
+            let searchArr = products.filter((product) => product.title.toLowerCase().includes(query.toLowerCase()));
+            // console.log(searchArr);
+
+            display(searchArr);
+        })
+
+        document.querySelector('#sort').addEventListener('change', () => {
+            const value = document.querySelector("#sort").value
+            if (value == 'asc') {
+                let sortAsc = products.sort((a, b) => a.price - b.price)
+                display(sortAsc)
+            } else {
+                let sortDsc = products.sort((a, b) => b.price - a.price)
+                display(sortDsc)
+
+            }
+        })
+
+
+        function deleteCart(el, i) {
+            const carts = JSON.parse(localStorage.getItem("cart-arr"))
+            carts.splice(i, 1)
+            localStorage.setItem('cart-arr', JSON.stringify(carts));
+            alert(`${el.title} Deleted From cart!`);
+            let total = carts.reduce((acc, el) => {
+                return acc + el.price
+            }, 0)
+            document.querySelector(".cart").innerText = `Products ${total}`
+            display(JSON.parse(localStorage.getItem('cart-arr')))
+        }
+        function display(arr) {
+            console.log(arr);
+            prodDivs.innerText = ""
+            arr.forEach((el, i) => {
+                const div = document.createElement("div");
+                div.className = "product";
+
+                div.innerHTML = `
+                    <h2>${el.title}</h2>
+                    <img src="${el.image}" alt="">
+                    <p class="price">Price: ${el.price} Rs</p>
+                    <p>${el.description}</p>
+                    <button class="cart-btn">Delete</button>
+        `;
+
+                const btn = div.querySelector(".cart-btn");
+                btn.addEventListener("click", () => deleteCart(el, i));
+
+                prodDivs.appendChild(div); // Add the product card to DOM
+            });
+        }
+
+    </script>
+</body>
+
+</html>

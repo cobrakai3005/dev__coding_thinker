@@ -1,0 +1,63 @@
+Introduction to NodeJs
+Nodejs -> A javascript Runtime  + Extra inbuilt modules
+
+Chrome (v8 engine)
+Mozilla Firfox (spider monkey engine)
+Edge (Chakra)
+
+Extra inbuilt modules ->
+os, dns , path, crypto , fs, http
+
+Nodjs made by Ryan Dahl in 2008
+
+
+Node modules / package /method /library
+
+3 types
+
+A. Core Module Ex. OS , path, dns, fs, http
+
+[install X] no need to install Corre modules
+
+
+
+b. Internal Module /Community 
+install no and import yes
+no need to install 
+
+c. External Module / Community 
+
+install -- from npm
+you need to install and import  
+import yes install yes
+
+
+fs - > file system
+readFile
+readFileSync
+
+writeFile
+writeFileSync
+
+appendFile
+appendFileSync
+
+
+unlink 
+
+
+HTTP Module
+http
+If you  want crreate your own server then we use http protocol over their
+
+http ,method/ verbs
+GET, POST, PUT, PATCH, DElETE
+
+
+----3 Way Handshake------
+
+1. Signal (Intent)
+
+2. Acknowledge
+
+3. request -response cycle start  - > Transaction

@@ -1,0 +1,22 @@
+{
+  "students": [
+    {
+      "name": "Himanshu",
+      "age": 23
+    },
+    {
+      "name": "Harshit",
+      "age": 27
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Love Sir",
+      "age": 23
+    },
+    {
+      "name": "Neelesh Sir",
+      "age": 27
+    }
+  ]
+}

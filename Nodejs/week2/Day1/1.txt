@@ -1,0 +1,27 @@
+Welcome to DB
+
+Types of DB
+ --> SQL DB -Structure query lang
+ --> NO -SQL DB =- Not a SQL DB --> BANKING apps
+
+ Ex of SQL DB: MYSQL , POSTGRESS
+ Ex of NO-SQL DB: MONGODB , CASSENDRA--> NETFLIX
+
+ //Commands
+1. cls
+2. show dbs
+3. use chintu (db name)
+4. show collections
+5 use first  --> create database + switch
+
+6.create collections
+db.createCollection("product")
+7.insert Data in collections
+
+db.product.insert({name: "Laptop"})
+
+
+8. db.student.find();
+
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+
+<body>
+
+
+    <h1>Aync And await</h1>
+    <p>async - await is</p>
+    <p>It is build on top of promise</p>
+    async keyword is used to make function to behave like an asynchronous function
+    async is used to declare asynchronous function
+    await : key word is used to resolved the promise it waits untill untill asynchronoius code is executioion completed
+
+    <script>
+
+        async function getData() {
+            const res = await fetch("https://fakestoreapi.com/products")
+            const dt = await res.json()
+        }
+        getData()
+    </script>
+</body>
+
+</html>
